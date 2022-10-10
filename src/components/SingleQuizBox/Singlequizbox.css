@@ -1,0 +1,20 @@
+.cardimg {
+    background-color: #d6c2d6;
+
+}
+
+.cardimg img {
+    height: 210px;
+    width: 210px;
+}
+
+.cardSize {
+    max-width: 650px;
+}
+
+.start-practise-button {
+    background-color: #D8BFD8;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}

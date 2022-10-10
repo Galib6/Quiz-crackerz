@@ -1,0 +1,10 @@
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 650px;
+}
+
+.quiz-card {
+    margin: 50px 20%;
+    border: 1px dotted gray;
+}

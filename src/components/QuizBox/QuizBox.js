@@ -19,7 +19,8 @@ const QuizBox = () => {
                     <h1 className='text-center'>The Basic of <span className="purple">Developer</span></h1>
                     <p className='text-center' >Its is a platform where developers can take quiizes.</p>
                     <p className='text-center'>It will asses their knoledge and build their skill in web developement</p>
-                    <a href="#card" className='button1' >Get Started</a>
+                    <br />
+                    <a href="#card" className=' button1' >Get Started</a>
 
 
                 </div>

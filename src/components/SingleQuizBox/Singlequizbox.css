@@ -8,13 +8,13 @@
     width: 210px;
 }
 
-.cardSize {
-    max-width: 650px;
-}
-
 .start-practise-button {
-    background-color: #D8BFD8;
+    background-color: #c274c2;
     border: none;
     color: white;
     border-radius: 5px;
+}
+
+.card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

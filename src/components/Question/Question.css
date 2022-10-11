@@ -1,15 +1,15 @@
 .options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 650px;
+    max-width: 680px;
 }
 
 .quiz-card {
-    margin: 20px 20%;
+    margin: 20px 15%;
     border: 1px dotted gray;
-    background-color: #D8BFD8;
+    background-color: #c297c2;
     border-radius: 10px;
-    min-height: 300px;
+    min-height: 320px;
 }
 
 .title {

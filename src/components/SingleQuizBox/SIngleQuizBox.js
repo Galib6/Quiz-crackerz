@@ -12,7 +12,7 @@ const SIngleQuizBox = ({ QuizBox }) => {
     }
     return (
         <Col className='mt-5'>
-            <Card>
+            <Card className='card1'>
                 <Card.Img variant="top" src={QuizBox.logo} className="cardimg" />
                 <Card.Body>
                     <Card.Title><h5 className="card-title">{QuizBox.name}</h5></Card.Title>

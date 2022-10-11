@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='header-bar sticky-top'>
             <Container fluid className='container'>
-                <Navbar.Brand href="#" ><FontAwesomeIcon icon={faTerminal} />Hello Dev!</Navbar.Brand>
+                <Navbar.Brand href="#" ><span className='title1'><FontAwesomeIcon icon={faTerminal} />Hello Dev!</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav

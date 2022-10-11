@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 
 
-const Question = ({ question }) => {
+const Question = ({ question, setMark, mark, setwmark, wmark }) => {
     // console.log(question)
     const { correctAnswer, options, id } = question
     // console.log(id)
@@ -13,10 +13,13 @@ const Question = ({ question }) => {
     const [selected, setSelected] = useState();
     const [cA, setcA] = useState("")
 
+
     let message;
+
     if (selected) {
         if (selected === correctAnswer) {
-            message = <h4 className='text-center'>Your answer is correct</h4>
+            message = <h4 className='text-center text-success mt-5'>Your answer is correct</h4>
+
         }
         else if (selected !== correctAnswer) {
             message = <h4 className='text-center text-danger mt-3'>Wrong!! Correct answer is: {correctAnswer}</h4>
@@ -35,12 +38,14 @@ const Question = ({ question }) => {
         // console.log(event.target.value);
         setSelected(event.target.value);
 
-        // if (event.target.value === correctAnswer) {
-        //     setcA(correctAnswer);
-        // }
-        // else {
-        //     setSelected(event.target.value);
-        // }
+        if (event.target.value === correctAnswer) {
+            mark = mark + 1;
+            setMark(mark);
+        }
+        else {
+
+        }
+
     }
 
     // console.log(cA)

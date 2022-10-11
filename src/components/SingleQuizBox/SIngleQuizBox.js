@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Singlequizbox.css"
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
 
 const SIngleQuizBox = ({ QuizBox }) => {
     // console.log(QuizBox)
@@ -9,24 +11,23 @@ const SIngleQuizBox = ({ QuizBox }) => {
         navigate(`/topics/${QuizBox.id}`)
     }
     return (
-        <div className='cardSize mx-auto'>
-            <div className="container card mb-3 mt-5 ">
-                <div className="row no-gutters">
-                    <div className="col-md-4 cardimg">
-                        <img src={QuizBox.logo} className="card-img img-fluid" alt="..." />
-                    </div>
-                    <div className="col-md-8">
-                        <div className="card-body">
-                            <h5 className="card-title">{QuizBox.name}</h5>
-                            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p>Total Question: {QuizBox.total}</p>
-                            <button onClick={handleNavigate} className='start-practise-button'>Start Practice</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <Col className='mt-5'>
+            <Card>
+                <Card.Img variant="top" src={QuizBox.logo} className="cardimg" />
+                <Card.Body>
+                    <Card.Title><h5 className="card-title">{QuizBox.name}</h5></Card.Title>
+                    <Card.Text>
+                        <button onClick={handleNavigate} className='start-practise-button'>Start Practice</button>
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </Col>
     );
 };
 
 export default SIngleQuizBox;
+
+
+
+// <button onClick={handleNavigate} className='start-practise-button'>Start Practice</button>
+// <h5 className="card-title">{QuizBox.name}</h5>

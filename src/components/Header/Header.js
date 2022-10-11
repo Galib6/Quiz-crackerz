@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTerminal } from "@fortawesome/free-solid-svg-icons"
 
 import "./Header.css"
 
@@ -11,7 +13,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='header-bar sticky-top'>
             <Container fluid className='container'>
-                <Navbar.Brand href="#">Quiz Dev</Navbar.Brand>
+                <Navbar.Brand href="#" ><FontAwesomeIcon icon={faTerminal} />Hello Dev!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav

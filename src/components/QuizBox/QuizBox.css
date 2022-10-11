@@ -1,0 +1,12 @@
+.purple {
+    color: #c274c2;
+}
+
+.button1 {
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px 50px;
+    color: white;
+    background-color: #c274c2;
+    border-radius: 15px;
+}

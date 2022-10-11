@@ -16,7 +16,7 @@ const Question = ({ question }) => {
     let message;
     if (selected) {
         if (selected === correctAnswer) {
-            message = <h6 className='text-center'>Your answer is correct</h6>
+            message = <h4 className='text-center'>Your answer is correct</h4>
         }
         else if (selected !== correctAnswer) {
             message = <h4 className='text-center text-danger mt-3'>Wrong!! Correct answer is: {correctAnswer}</h4>
@@ -35,20 +35,22 @@ const Question = ({ question }) => {
         // console.log(event.target.value);
         setSelected(event.target.value);
 
-        if (event.target.value === correctAnswer) {
-            setcA(correctAnswer);
-        }
-        else {
-            setSelected(event.target.value);
-        }
+        // if (event.target.value === correctAnswer) {
+        //     setcA(correctAnswer);
+        // }
+        // else {
+        //     setSelected(event.target.value);
+        // }
     }
 
     // console.log(cA)
+    const question1 = question.question.slice(+3, -4)
+    // console.log(question1)
 
     return (
         <div className='quiz-card'>
             <div className='d-flex w-100 justify-content-between'>
-                <h3 className='text-center title'>Question: {question.question}</h3>
+                <h3 className='text-center title'>Question: {question1}</h3>
                 <a onClick={() => setcA(correctAnswer)} className='p-2 text-white'><FontAwesomeIcon icon={faEye} /></a>
             </div>
             <div className='options mx-auto'>

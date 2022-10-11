@@ -3,6 +3,8 @@ import Op1 from '../options/Op1';
 import "./Question.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from "@fortawesome/free-solid-svg-icons"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Question = ({ question, setMark, mark, setwmark, wmark }) => {
@@ -41,6 +43,7 @@ const Question = ({ question, setMark, mark, setwmark, wmark }) => {
         if (event.target.value === correctAnswer) {
             mark = mark + 1;
             setMark(mark);
+            notify();
         }
         else {
 
@@ -48,12 +51,40 @@ const Question = ({ question, setMark, mark, setwmark, wmark }) => {
 
     }
 
+
+    // toast
+    const notify = () => toast.success('Wow! Your answer is correct.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+
+
     // console.log(cA)
     const question1 = question.question.slice(+3, -4)
     // console.log(question1)
 
     return (
         <div className='quiz-card'>
+
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+
             <div className='d-flex w-100 justify-content-between'>
                 <h3 className='text-center title'>Question: {question1}</h3>
                 <a onClick={() => setcA(correctAnswer)} className='p-2 text-white'><FontAwesomeIcon icon={faEye} /></a>

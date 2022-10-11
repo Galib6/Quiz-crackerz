@@ -28,7 +28,7 @@ const QuizPage = () => {
 
     return (
         <div className='container'>
-            <h2 className='text-center mt-3'>Quiz of {data.name}</h2>
+            <h3 className='text-center mt-3 purple'>Quiz of {data.name}</h3>
             {marks}
             {
                 questions.map(question => <Question

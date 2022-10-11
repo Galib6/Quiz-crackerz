@@ -1,3 +1,13 @@
 .header-bar {
     background-color: #D8BFD8;
 }
+
+.header a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: lightgrey;
+    border-radius: 10%;
+}

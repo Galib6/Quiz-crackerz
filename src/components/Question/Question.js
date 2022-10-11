@@ -19,7 +19,7 @@ const Question = ({ question }) => {
             message = <h6 className='text-center'>Your answer is correct</h6>
         }
         else if (selected !== correctAnswer) {
-            message = <h6 className='text-center'>Wrong!! Correct answer is: {correctAnswer}</h6>
+            message = <h4 className='text-center text-danger mt-3'>Wrong!! Correct answer is: {correctAnswer}</h4>
         }
         else {
             message = ""
@@ -64,7 +64,7 @@ const Question = ({ question }) => {
             </div>
             {message}
 
-            <h6 className={`text-center text-white ${cA ? "" : "d-none"}`}>Correct answer is: {correctAnswer}</h6>
+            <h4 className={`text-center ${cA ? "" : "d-none"}`}>Correct answer is: {correctAnswer}</h4>
 
         </div>
     );

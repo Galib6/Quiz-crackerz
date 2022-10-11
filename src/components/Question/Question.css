@@ -20,7 +20,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 420px) {
     .options {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

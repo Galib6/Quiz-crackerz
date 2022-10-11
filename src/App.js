@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Main from './components/Components/Layout/Main';
-import QuizPage from './components/Components/QuizPage/QuizPage';
+import Main from './components/Layout/Main';
+import QuizPage from './components/QuizPage/QuizPage';
 import QuizBox from './components/QuizBox/QuizBox';
 
 function App() {

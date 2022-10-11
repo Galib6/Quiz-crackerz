@@ -11,7 +11,7 @@ const Header = () => {
     return (
         <Navbar expand="lg" className='header-bar sticky-top'>
             <Container fluid className='container'>
-                <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                <Navbar.Brand href="#">Quiz Dev</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav

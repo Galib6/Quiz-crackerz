@@ -3,6 +3,8 @@ import { useLoaderData } from 'react-router-dom';
 import Question from '../Question/Question';
 import "./Quizpage.css"
 
+
+
 const QuizPage = () => {
     const Quiz = useLoaderData()
     const { questions } = Quiz.data
@@ -13,9 +15,10 @@ const QuizPage = () => {
     return (
         <div className='container'>
             <h2 className='text-center'>Quiz of {data.name}</h2>
+
             {
                 questions.map(question => <Question
-                    key={data.id}
+                    key={question.id}
                     question={question}
                 ></Question>)
             }

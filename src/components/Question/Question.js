@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Op1 from '../../options/Op1';
+import Op1 from '../options/Op1';
 import "./Question.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEye } from "@fortawesome/free-solid-svg-icons"
 
 
 const Question = ({ question }) => {
@@ -45,11 +47,14 @@ const Question = ({ question }) => {
 
     return (
         <div className='quiz-card'>
-            <h3 className='text-center title'>Question: {question.question}</h3>
+            <div className='d-flex w-100 justify-content-between'>
+                <h3 className='text-center title'>Question: {question.question}</h3>
+                <a onClick={() => setcA(correctAnswer)} className='p-2 text-white'><FontAwesomeIcon icon={faEye} /></a>
+            </div>
             <div className='options mx-auto'>
                 {
                     options.map(option => <Op1
-                        key={id}
+                        key={option}
                         id={id}
                         option={option}
                         handleChange={handleChange}
@@ -59,8 +64,8 @@ const Question = ({ question }) => {
             </div>
             {message}
 
-            {/* <h6 className={`text-center ${selected === correctAnswer ? "d-none" : ""}`}>Wrong!! Correct answer is: {correctAnswer}</h6>
-            <h6 className={`text-center ${selected !== correctAnswer ? "d-none" : ""}`}>Your answer is correct</h6> */}
+            <h6 className={`text-center text-white ${cA ? "" : "d-none"}`}>Correct answer is: {correctAnswer}</h6>
+
         </div>
     );
 };

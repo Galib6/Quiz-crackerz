@@ -5,6 +5,16 @@
 }
 
 .quiz-card {
-    margin: 50px 20%;
+    margin: 20px 20%;
     border: 1px dotted gray;
+    background-color: #D8BFD8;
+    border-radius: 10px;
+    min-height: 250px;
+}
+
+.title {
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }

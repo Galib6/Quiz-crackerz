@@ -5,6 +5,7 @@ import QuizPage from './components/QuizPage/QuizPage';
 import QuizBox from './components/QuizBox/QuizBox';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import Error from './components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -44,10 +45,16 @@ function App() {
           path: "/blog",
           element: <Blog></Blog>
         },
-
+        {
+          path: "*",
+          element: <Error></Error>
+        },
       ]
-    }
-
+    },
+    {
+      path: "*",
+      element: <Error></Error>
+    },
   ])
   return (
     <div className="App">

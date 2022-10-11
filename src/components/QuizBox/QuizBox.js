@@ -12,7 +12,7 @@ const QuizBox = () => {
 
     return (
         <div className='container'>
-            <div className='d-flex justify-content-around align-items-center'>
+            <div className='header-box'>
                 <div>
                     <p className='text-center purple'>Hello Deveoper's</p>
                     <h1 className='text-center'>A platfrom for Practicing</h1>

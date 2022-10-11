@@ -17,7 +17,7 @@ const QuizPage = () => {
 
     let marks;
     if (mark) {
-        marks = <div className='text-center mt-4 marks1 sticky-top'><h4>You Got: {mark}  Total Marks: {questions.length}</h4></div>
+        marks = <div className='text-center mt-4 marks1 sticky-lg-top'><h4>You Got: {mark}  Total Marks: {questions.length}</h4></div>
     }
     else {
         marks = ""
